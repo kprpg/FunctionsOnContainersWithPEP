@@ -1,0 +1,19 @@
+{
+    "bindings": [
+      {
+        "name": "myBlob",
+        "type": "blobTrigger",
+        "direction": "in",
+        "path": "datafiles/{name}",
+        "connection": "FileStore"
+      },
+      {
+        "tableName": "FileLogs",
+        "connection": "FileStore",
+        "name": "tableBinding",
+        "type": "table",
+        "direction": "out"
+      }
+    ]
+  }
+  
