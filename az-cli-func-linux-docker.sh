@@ -54,7 +54,7 @@ docker push girishpillai/azurefunctionsimage:v1.0.2
 
 ### Azure parts ####
 ## Switch Terminal to WSL/bash, before running the below.
-export APP_SUBSCRIPTION_ID=9be5e992-8ed3-4239-b795-e618ae9051bd
+export APP_SUBSCRIPTION_ID=<<Replace-with-sub-id>>
 export POC_PREFIX=poc
 export FUNC_STORAGE_ACCOUNT=$POC_PREFIX"storeacct"
 export RG=AzureFunctionsContainers-rg
@@ -102,15 +102,15 @@ func azure functionapp fetch-app-settings func-poc-docker
 ################################ Docker BEGIN   ###################################
 ## Now docker commands related to azure func.
 ## CD to the correct folder.
-cd C:\Users\gpillai\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\gpillai\LocalFunctionsProject
+cd C:\Users\<XXX>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\gpillai\LocalFunctionsProject
 ## Build the docker for the function
 ## Switch to a "Command Prompt" terminal
-docker build --tag girishpillai/azurefunctionsimage:v1.0.0 .
+docker build --tag <<Replace_Tag_String>>/azurefunctionsimage:v1.0.0 .
 ## run it locally and check
-docker  run -p 8080:80 -it girishpillai/azurefunctionsimage:v1.0.0
+docker  run -p 8080:80 -it <<Replace_Tag_String>>/azurefunctionsimage:v1.0.0
 ## Verify function by going to http://localhost:8080
 ## Push the image to docker hub
-docker push girishpillai/azurefunctionsimage:v1.0.0
+docker push <<Replace_Tag_String>>/azurefunctionsimage:v1.0.0
 ################################ Docker END   ###################################
 
 ## Check the Storage queue for message insertion
