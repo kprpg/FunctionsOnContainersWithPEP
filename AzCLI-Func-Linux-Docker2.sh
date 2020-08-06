@@ -20,7 +20,7 @@ func start
 
 ## Now to upload to the Function in Azure, created with "Docker" as hosting option
 ## ATT POC SUB -> ES-CUS-AT&TEXHIBIT02-DEV-ATTDEVOPSPATTERN
-export APP_SUBSCRIPTION_ID=9be5e992-8ed3-4239-b795-e618ae9051bd
+export APP_SUBSCRIPTION_ID=<<Your-Sub-ID>>
 az login
 az account set --subscription $APP_SUBSCRIPTION_ID
 
@@ -94,7 +94,7 @@ az functionapp deployment container show-cd-url --name $APP_NAME --resource-grou
 ## Locate and select image, select the Webhooks tab, specify a Webhook name, 
 ## paste your URL in Webhook URL, and then select Create:
 ## WEBHOOK-NAME=continuousdeployment4poc
-## URL for CI-CD = https://$func-poc-docker:ubt5E39FaKcTYDz6ue3ihkPSzSBnSmC59G9fd6z0ze8skk23QSvwcQPcypiB@func-poc-docker.scm.azurewebsites.net/docker/hook
+## URL for CI-CD = https://$func-poc-docker:<<XX>>@func-poc-docker.scm.azurewebsites.net/docker/hook
 
 ## Enable SSH
 ## https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?tabs=bash%2Cazurecli&pivots=programming-language-javascript#enable-ssh-connections
