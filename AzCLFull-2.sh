@@ -1,6 +1,6 @@
 # Please provide your subscription id here
 ## ATT POC SUB -> "My Azure Subscription"
-export APP_SUBSCRIPTION_ID=9be5e992-8ed3-4239-b795-e618ae9051bd
+export APP_SUBSCRIPTION_ID=<<Replace with Sub-ID>>
 # Please provide your unique prefix to make sure that your resources are unique
 export APP_PREFIX=funcpriv
 # Please provide your region, and make sure the region supports container hosting for Functions.
