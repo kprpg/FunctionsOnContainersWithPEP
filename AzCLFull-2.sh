@@ -56,8 +56,8 @@ az acr create --resource-group $APP_PE_DEMO_RG --name $DEMO_ACR --sku Premium --
 ## NOTE: Once you create the ACR, go to the portal, go to ACR->Access Keys Tab and fill up 
 ## the username and password for ACR below, removing leading and trailing angle braces and run these two lines. They are required in Azure CLI
 ## where you create the function app.
-ACR_Adminuser=funcprivAzAcrPriv
-ACR_AdminPassword=ek3eKdZ=1q7VGj9AgJVhcxmEEK1Y8KK5
+ACR_Adminuser=<<Replace_AdminUser>
+ACR_AdminPassword=<<Replace_AdminPassword>>
 export ACR_RESOURCE_ID="/subscriptions/"$APP_SUBSCRIPTION_ID"/resourceGroups/"$APP_PE_DEMO_RG"/providers/Microsoft.ContainerRegistry/registries/"$DEMO_ACR
 ##
 ####################### BEGIN ACR Build  ##############################
