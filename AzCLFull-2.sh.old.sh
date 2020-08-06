@@ -1,6 +1,6 @@
 # Please provide your subscription id here
 ## ATT POC SUB -> "My Azure Subscription"
-export APP_SUBSCRIPTION_ID=9be5e992-8ed3-4239-b795-e618ae9051bd
+export APP_SUBSCRIPTION_ID=<< Your Sub ID>>
 # Please provide your unique prefix to make sure that your resources are unique
 export APP_PREFIX=attfunctest
 # Please provide your region, and make sure the region supports container hosting for Functions.
@@ -58,7 +58,7 @@ az acr login -n  $DEMO_ACR --expose-token
 ## Copy the access token for use below.
 ## docker login loginServer -u 00000000-0000-0000-0000-000000000000 -p accessToken
 docker login loginServer -u 00000000-0000-0000-0000-000000000000 -p accessToken
-## docker login $DEMO_ACR.azurecr.io -u 00000000-0000-0000-0000-000000000000 -p eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZRRjI6RkRNTTpSUjQ2OkE3WFg6N0Q3UjpFNE1COkZJMzQ6RENVUzpQR1dLOldPSjc6SktaSjpSTkkyIn0.eyJqdGkiOiJjNzY3ZjRlOS01OTk4LTQ5YmItYTY1MC1jNmMwMTcxMDg2NjkiLCJzdWIiOiJncGlsbGFpQG1pY3Jvc29mdC5jb20iLCJuYmYiOjE1OTQ4NTQyNTUsImV4cCI6MTU5NDg2NTk1NSwiaWF0IjoxNTk0ODU0MjU1LCJpc3MiOiJBenVyZSBDb250YWluZXIgUmVnaXN0cnkiLCJhdWQiOiJhdHRmdW5jdGVzdGF6YWNyLmF6dXJlY3IuaW8iLCJ2ZXJzaW9uIjoiMS4wIiwiZ3JhbnRfdHlwZSI6InJlZnJlc2hfdG9rZW4iLCJ0ZW5hbnQiOiI3MmY5ODhiZi04NmYxLTQxYWYtOTFhYi0yZDdjZDAxMWRiNDciLCJwZXJtaXNzaW9ucyI6eyJhY3Rpb25zIjpbInJlYWQiLCJ3cml0ZSIsImRlbGV0ZSJdLCJub3RBY3Rpb25zIjpudWxsfSwicm9sZXMiOltdfQ.4KcH8c6ai7J6oH4ff6VZsVatY7eMfERhLvPMikPkxeaOChkGDJ5razZRnWPQ2Rb5xtvuRzql55181pR-PEtU7YUtKt7nshGEeMO395FFdtiE6bcKfsUTWzCBVJsL2JAUEVDzfIxOP2pg-c5Ahnms4R5HrSgEmGGGO6KFYyqerg03Q9D81ovFAnafQeAt1ZwqYZakQ01-9ZG2XujKrE_VM6-lc2pjTEbKHrEel6u3Gg5pyAgOu9HiDp0Nw3MncaSvRxq54HxNRplTFKilVu-6Nv5nA85aYTCCr0MOq7inGZz8fGjzPhZ-v5p-f5pIyPNKjyqoeqg9dqaG5NpSto9K7Q
+## docker login $DEMO_ACR.azurecr.io -u 00000000-0000-0000-0000-000000000000 -p <<Token>>
 ## Fill values below before executing
 ## Go to the portal, go to the ACR -> Access Keys and note down the below. These values are required for Function App Creation.
 ACR-AdminUser=<Your_ACR_ADMIN_USER_NAME>
