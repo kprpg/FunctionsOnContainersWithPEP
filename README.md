@@ -29,7 +29,7 @@ The sample sets up the following Azure resources:
 
 The diagram provide shows a high-level depiction of the sample architecture.
 
-![High level architecture diagram](./media/HighLevelArchitecture-diagram.png)
+![High level architecture diagram](./media/HighLevelArchitecture-diagram1.png)
 ## Prerequisites
 
 The following components are required to run this sample:
