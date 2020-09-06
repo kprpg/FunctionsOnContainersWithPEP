@@ -301,7 +301,7 @@ Before making the various resources acessible only via PEP, do sanity tests.
 
 **Phase 5** 
 
-##### Deploy the Private End Points(Pep) and Private DNS Zones
+##### Deploy the Private End Points(PEP) and Private DNS Zones
 
 ###### Prepare the VNets and subnets for Private Link
 ```bash
@@ -313,7 +313,7 @@ az network vnet subnet update -g $APP_PE_DEMO_RG -n $DEMO_VNET_PL_SUBNET --vnet-
 
 ```
 
-###### 5.1 ACR - Pep and Dns 
+###### 5.1 ACR - PEP and Dns 
 ```bash
 ### Set up PEP and Private DNS Zones for the ACR ####
 PRIVATE_ACR_IP=$(az network private-endpoint create -g $APP_PE_DEMO_RG -n funcacrpe --vnet-name $DEMO_VNET --subnet $DEMO_VNET_PL_SUBNET \
@@ -338,7 +338,7 @@ az network private-dns link vnet create -g $APP_PE_DEMO_RG --virtual-network $DE
 #############  END ACR and Private DNS for ACR ############################################
 ```
 
-###### 5.2 Storage - Pep and Dns
+###### 5.2 Storage - PEP and Dns
 
 ```bash
 # Create App Storage Private Links
@@ -353,7 +353,7 @@ PRIVATE_APP_QUEUE_IP=$(az network private-endpoint create -g $APP_PE_DEMO_RG -n 
 
 ```
 
-###### 5.3 AKV - Pep and DNS
+###### 5.3 AKV - PEP and DNS
 ```bash
 
 # Create Key Vault Private Link
@@ -368,7 +368,7 @@ az network private-dns record-set a add-record -g $APP_PE_DEMO_RG -z $AZUREKEYVA
 az network private-dns link vnet create -g $APP_PE_DEMO_RG --virtual-network $DEMO_VNET --zone-name $AZUREKEYVAULT_ZONE --name kvdnsLink --registration-enabled false
 ```
 
-###### 5.4. Storage (Blob, Table & Queue) - Pep and Dns
+###### 5.4. Storage (Blob, Table & Queue) - PEP and DNS
 ```bash
 export AZUREBLOB_ZONE=privatelink.blob.core.windows.net
 az network private-dns zone create -g $APP_PE_DEMO_RG -n $AZUREBLOB_ZONE
@@ -402,7 +402,7 @@ az functionapp show -g $APP_PE_DEMO_RG -n $DEMO_FUNC_NAME
 
 export FUNC_APP_RESOURCE_ID="/subscriptions/"$APP_SUBSCRIPTION_ID"/resourceGroups/"$APP_PE_DEMO_RG"/providers/Microsoft.Web/sites/"$DEMO_FUNC_NAME
 ```
-###### - Function App - Pep and DNS
+###### - Function App - PEP and DNS
 ```bash
 ##################################################################################################
 # !!!!!!!!!!!!!!!!!!!!!!!!Stop Here Before Creating the Private Endpoint for Function!!!!!!!!!!!!!
