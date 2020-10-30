@@ -296,7 +296,7 @@ az keyvault set-policy -g  $APP_PE_DEMO_RG --name $DEMO_APP_AKV --object-id $APP
 
 **Test prior to deploying PEP and Private DNS Zones**
 
-Before making the various resources acessible only via PEP, do sanity tests.
+Before making the various resources acessible only via PEP, do some sanity tests.
  
 
 **Phase 5** 
