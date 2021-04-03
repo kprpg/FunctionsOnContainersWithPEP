@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kprpgfunctionsoncontainerswithpep 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kprpgfunctionsoncontainerswithpep
+  template:
+    metadata:
+      labels:
+        app: kprpgfunctionsoncontainerswithpep 
+    spec:
+      containers:
+        - name: kprpgfunctionsoncontainerswithpep 
+          image: mycontainerregistrygp.azurecr.io/kprpgfunctionsoncontainerswithpep
+          ports:
+          - containerPort: 80
